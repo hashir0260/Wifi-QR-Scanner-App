@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/imgBackExit"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/back_ic" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:fontFamily="@font/itim_regular"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBackExit"
+        app:layout_constraintStart_toEndOf="@+id/imgBackExit"
+        app:layout_constraintTop_toTopOf="@+id/imgBackExit"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imgWifiScanQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgWifiCreate"
+        app:layout_constraintTop_toBottomOf="@+id/imgBackExit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/scan_wifi_ic" />
+
+    <ImageView
+        android:id="@+id/imgWifiCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/create_wifi_qr"
+        app:layout_constraintBottom_toBottomOf="@+id/imgWifiScanQR"
+        app:layout_constraintEnd_toStartOf="@+id/imgContactCreate"
+        app:layout_constraintStart_toEndOf="@+id/imgWifiScanQR"
+        app:layout_constraintTop_toTopOf="@+id/imgWifiScanQR" />
+
+    <ImageView
+        android:id="@+id/imgContactCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/contact_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/imgWifiScanQR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgWifiCreate"
+        app:layout_constraintTop_toTopOf="@+id/imgWifiScanQR" />
+
+    <ImageView
+        android:id="@+id/imgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/text_qr_ic"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="@+id/imgWifiScanQR"
+        app:layout_constraintStart_toStartOf="@+id/imgWifiScanQR"
+        app:layout_constraintTop_toBottomOf="@+id/imgWifiScanQR" />
+
+    <ImageView
+        android:id="@+id/imgUrlQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/url_qr_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/imgText"
+        app:layout_constraintEnd_toEndOf="@+id/imgWifiCreate"
+        app:layout_constraintStart_toStartOf="@+id/imgWifiCreate"
+        app:layout_constraintTop_toTopOf="@+id/imgText" />
+
+    <ImageView
+        android:id="@+id/imgEmailQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/email_qr_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/imgText"
+        app:layout_constraintEnd_toEndOf="@+id/imgContactCreate"
+        app:layout_constraintStart_toStartOf="@+id/imgContactCreate"
+        app:layout_constraintTop_toTopOf="@+id/imgText" />
+
+    <ImageView
+        android:id="@+id/imgWhatsappQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsapp_ic"
+        app:layout_constraintTop_toBottomOf="@id/imgText"
+        app:layout_constraintStart_toStartOf="@id/imgText"
+        app:layout_constraintEnd_toEndOf="@id/imgText"
+        android:layout_marginTop="@dimen/_50sdp" />
+
+    <ImageView
+        android:id="@+id/imgInstagramQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instagram_ic"
+        app:layout_constraintTop_toTopOf="@id/imgWhatsappQR"
+        app:layout_constraintBottom_toBottomOf="@id/imgWhatsappQR"
+        app:layout_constraintStart_toStartOf="@id/imgUrlQR"
+        app:layout_constraintEnd_toEndOf="@id/imgUrlQR" />
+
+    <ImageView
+        android:id="@+id/imgTwitterQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/x_vector"
+        app:layout_constraintTop_toTopOf="@id/imgInstagramQR"
+        app:layout_constraintBottom_toBottomOf="@id/imgInstagramQR"
+        app:layout_constraintStart_toStartOf="@id/imgEmailQR"
+        app:layout_constraintEnd_toEndOf="@id/imgEmailQR" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgInstagramQR"
+        android:layout_marginTop="@dimen/_50sdp"
+        >
+
+    <ImageView
+        android:id="@+id/rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_ic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/generate_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/generate_vector"
+        app:layout_constraintStart_toStartOf="@id/rect"
+        app:layout_constraintTop_toTopOf="@id/rect"
+        app:layout_constraintBottom_toBottomOf="@id/rect"
+        android:layout_marginStart="@dimen/_60sdp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/generatee"
+        android:fontFamily="@font/itim_regular"
+        android:textColor="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/generate_qr"
+        app:layout_constraintStart_toStartOf="@id/generate_qr"
+        app:layout_constraintEnd_toEndOf="@id/generate_qr"
+        />
+
+        <ImageView
+            android:id="@+id/settings_id"
+            android:layout_width="46dp"
+            android:layout_height="31dp"
+            android:layout_marginEnd="@dimen/_55sdp"
+            android:src="@drawable/icons8_settings_96___"
+            app:layout_constraintBottom_toBottomOf="@id/rect"
+            app:layout_constraintEnd_toEndOf="@id/rect"
+            app:layout_constraintTop_toTopOf="@id/rect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settingsss"
+        android:fontFamily="@font/itim_regular"
+        android:textColor="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/settings_id"
+        app:layout_constraintStart_toStartOf="@id/settings_id"
+        app:layout_constraintEnd_toEndOf="@id/settings_id"
+        />
+
+
+    <ImageView
+        android:id="@+id/scan_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scan_vector"
+        app:layout_constraintTop_toTopOf="@id/constraint6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

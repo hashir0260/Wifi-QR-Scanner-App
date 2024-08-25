@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog_rate_background"
+    android:padding="@dimen/_16sdp"
+    >
+
+    <TextView
+        android:id="@+id/txtRateUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_us1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/proxima_regular"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_26sdp" />
+
+    <TextView
+        android:id="@+id/txtRateDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/how_would_you_love_this_app"
+        android:fontFamily="@font/proxima_regular"
+        android:gravity="center"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRateUs" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="0"
+        android:layout_margin="16dp"
+        android:theme="@style/RatingBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRateDesc"
+        app:layout_constraintBottom_toTopOf="@id/btnRateUsSubmit"
+        android:isIndicator="false"/>
+
+    <Button
+        android:id="@+id/btnRateUsSubmit"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@color/yellow"
+        android:text="@string/submit"
+        android:fontFamily="@font/proxima_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/txtRateDesc"
+        app:layout_constraintEnd_toEndOf="@id/txtRateDesc"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

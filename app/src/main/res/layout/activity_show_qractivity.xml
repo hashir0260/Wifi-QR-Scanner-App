@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_light"
+    tools:context=".ui.activities.ShowQRCodeActivity">
+
+
+    <ImageView
+        android:id="@+id/imgBackExit"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/back_ic"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:fontFamily="@font/itim_regular"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBackExit"
+        app:layout_constraintStart_toEndOf="@+id/imgBackExit"
+        app:layout_constraintTop_toTopOf="@+id/imgBackExit" />
+
+    <ImageView
+        android:id="@+id/imgQR"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_220sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@+id/imgBackExit"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        />
+
+    <Button
+        android:id="@+id/btnShareQR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:background="@drawable/button_bg"
+        android:text="@string/share_qr"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/_13sdp"
+        android:backgroundTint="@color/yellow"
+        app:iconGravity="textEnd"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgQR" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

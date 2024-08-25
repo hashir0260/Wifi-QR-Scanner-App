@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_light"
+    tools:context="ui.activities.ContactQRActivity">
+
+    <ImageView
+        android:id="@+id/imgBackExit"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/back_ic"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:fontFamily="@font/itim_regular"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBackExit"
+        app:layout_constraintStart_toEndOf="@+id/imgBackExit"
+        app:layout_constraintTop_toTopOf="@+id/imgBackExit" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardWhats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBackExit"
+        app:cardElevation="@dimen/_7sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_7sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:padding="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/itim_regular"
+                android:text="@string/contact_qr"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/black_light"
+                android:padding="@dimen/_8sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_8sdp"
+                app:ccp_hideNameCode="true"
+                app:ccp_showFlag="false"
+                app:ccp_backgroundColor="@color/white"
+                app:ccp_textColor="@color/black_light"
+                app:layout_constraintBottom_toBottomOf="@+id/edtNumber"
+                app:layout_constraintStart_toEndOf="@+id/edtNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtNumber" />
+
+            <EditText
+                android:id="@+id/edtNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/black_light"
+                android:fontFamily="@font/itim_regular"
+                android:hint="@string/phone_no"
+                android:inputType="number"
+                android:maxLength="20"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_8sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/txtNumberInfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ccp"
+                android:layout_marginStart="@dimen/_7sdp"
+
+                app:layout_constraintTop_toBottomOf="@+id/txtType" />
+
+            <ImageView
+                android:id="@+id/imgCancelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/close_ic"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="@+id/edtNumber"
+                app:layout_constraintBottom_toBottomOf="@+id/edtNumber"
+                android:visibility="invisible"
+                android:elevation="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:id="@+id/txtNumberInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/itim_regular"
+                android:gravity="center"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/other_contact_can"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtNumber"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_15sdp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardWhats"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:text="@string/create"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/black_light"
+        android:fontFamily="@font/itim_regular"
+        android:backgroundTint="@color/grey"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

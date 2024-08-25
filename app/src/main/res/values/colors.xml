@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FDB623</color>
+    <color name="black_light">#333333</color>
+    <color name="qr_code_finder_mask">#80000000</color>
+    <color name="qr_code_finder_frame">#FFFFFFFF</color>
+    <color name="startColor">#6CA5CA</color>
+    <color name="grey">#696D70</color>
+    <color name="background">#525252</color>
+
+</resources>
